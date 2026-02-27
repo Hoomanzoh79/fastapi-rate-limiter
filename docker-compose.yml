@@ -1,0 +1,35 @@
+services:
+  fastapi-ratelimiter:
+    build: .
+    container_name: fastapi-ratelimiter
+    depends_on:
+      - redis
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+
+  redis:
+    image: hub.hamdocker.ir/redis:latest
+    container_name: redis
+    ports:
+      - "6379:6379"
+    restart: always
+    volumes:
+      - redis_data:/data
+
+  redisinsight:
+    image: hub.hamdocker.ir/redis/redisinsight:latest
+    container_name: redisinsight
+    ports:
+      - "5540:5540"
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+    depends_on:
+      - redis
+
+volumes:
+  redis_data:
