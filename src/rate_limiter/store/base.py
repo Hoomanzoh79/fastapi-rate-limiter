@@ -1,6 +1,5 @@
 from typing import Protocol
 
-
 class RateLimitStore(Protocol):
 
     async def incr(self, key: str, expire: int) -> int:
