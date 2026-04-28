@@ -1,9 +1,10 @@
 import time
 
+from .base import RateLimitStrategy
 from src.rate_limiter.models import RateLimitResult
 from src.rate_limiter.store.base import RateLimitStore
 
-class TokenBucketStrategy:
+class TokenBucketStrategy(RateLimitStrategy):
 
     def __init__(self, store:RateLimitStore, capacity: int, refill_rate: float):
         self.store = store

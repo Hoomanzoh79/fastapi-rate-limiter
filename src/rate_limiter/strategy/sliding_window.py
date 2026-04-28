@@ -1,9 +1,10 @@
 import time
 
+from .base import RateLimitStrategy
 from src.rate_limiter.models import RateLimitResult
 from src.rate_limiter.store.base import RateLimitStore
 
-class SlidingWindowStrategy:
+class SlidingWindowStrategy(RateLimitStrategy):
 
     def __init__(self, store:RateLimitStore, limit: int, window: int):
         self.store = store
