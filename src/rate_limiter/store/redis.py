@@ -1,8 +1,9 @@
 import redis.asyncio as aioredis
 
+from .base import RateLimitStore
 from src.setttings import settings
 
-class RedisStore:
+class RedisStore(RateLimitStore):
 
     def __init__(self, redis):
         self.redis = redis
