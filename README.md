@@ -59,27 +59,6 @@ Current implementation:
 
 Additional backends (Memcached, DynamoDB, MongoDB, etc.) can be added by implementing the same interface.
 
-## Project Structure
-
-```text
-src/
-├── rate_limiter/
-│   ├── limiter.py
-│   ├── middleware.py
-│   ├── key_generator.py
-│   ├── models.py
-│   │
-│   ├── strategy/
-│   │   ├── base.py
-│   │   ├── fixed_window.py
-│   │   ├── sliding_window.py
-│   │   └── token_bucket.py
-│   │
-│   └── store/
-│       ├── base.py
-│       └── redis.py
-```
-
 ## Supported Algorithms
 
 ### Fixed Window
