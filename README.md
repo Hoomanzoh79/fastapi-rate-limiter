@@ -16,6 +16,15 @@ A customizable and extensible rate limiting solution built with FastAPI and Redi
 - Asynchronous implementation using `redis.asyncio`
 - Easily extendable with custom strategies and storage providers
 
+## Technologies
+<div >
+	<img src="https://skillicons.dev/icons?i=python"/>
+	<img src="https://skillicons.dev/icons?i=fastapi"/>
+	<img src="https://skillicons.dev/icons?i=redis"/>
+	<img src="https://skillicons.dev/icons?i=docker"/>
+</div>
+  
+
 ## Architecture
 
 The project is designed around two abstraction layers:
@@ -248,11 +257,4 @@ class MongoStore(RateLimitStore):
 
 No changes are required in the middleware or application layer.
 
-## Technologies
-<div >
-	<img src="https://skillicons.dev/icons?i=python"/>
-	<img src="https://skillicons.dev/icons?i=fastapi"/>
-	<img src="https://skillicons.dev/icons?i=redis"/>
-	<img src="https://skillicons.dev/icons?i=docker"/>
-</div>
-  
+
